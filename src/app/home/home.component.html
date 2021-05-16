@@ -1,12 +1,15 @@
 <div class="card">
     <div class="card-body">
         <div class="card-text">
-            <input type="number" class="clock" placeholder="000" [(ngModel)]="entradaTempo">
+            <input type="number" class="clock" placeholder="00" [(ngModel)]="entradaTempo">
         </div>
-        <h2>Entre com os minutos</h2>
     </div>
+    <div class="minPast">
+        {{contador}} Minutos passados
+    </div>
+    
     <div class="buttonsClock">
-        <button type="button" class="btn btn-primary" (click)="iniciar()">Iniciar</button>
+        <button type="button" class="btn btn-primary" (click)="iniciar()" (click)="intervalo()">Iniciar</button>
         {{" "}}
         <button type="button" class="btn btn-warning" (click)="reiniciar()">Reiniciar</button>
         {{" "}}
